@@ -11,43 +11,130 @@ display: flex;
 }
 .navbar {
   position: relative;
-    font-family: 'Gotham';
-    display: flex;
-    font-size: 21px;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    padding: 20px;
+  font-family: 'Gotham';
+  display: flex;
+  font-size: 21px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 20px;
 
 }
 
-.logo{
+.logo {
+  margin-left: 100px;
   margin-right: 10px;
 }
 
 .logo img {
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.mid-icon {
+  display: flex;
+  align-items: center;
+  
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.right-icons a {
+  text-decoration: none;
+  margin-right: 30px; 
+  color: #000;
+}
+
+.right-icons a img {
+  width: 25px;
+  height: 25px;
+}
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+/* .navbar {
+  position: relative;
+    font-family: 'Gotham';
+    display: flex;
+    font-size: 21px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    background-color: aqua;
+
+}
+
+.logo{
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 400px;
+  height: 400px;
 }
 
 .navbar ul {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin-right: 460px;
     justify-content: center;
     flex-grow: 1;
+    background-color: #4CAF50;
   }
   
   .navbar li { 
     margin: 0 20px;
   }
   
+  .right-icons{
+    margin-left: 400px;
+  }
   .navbar a {
     text-decoration: none;
     color: #000;
     position: relative;
+  }
+  .navbar li.icon a {
+    text-decoration: none;
+    color: #000;
   }
   .navbar a::after {
     content: '';
@@ -65,7 +152,11 @@ display: flex;
   .navbar a.active::after {
     width: 100%; 
   }
-
+  .right-icons a {
+    
+    text-decoration: none;
+    color: #000;
+  } */
   .h1 {
     font-family: 'Gotham';
   }
