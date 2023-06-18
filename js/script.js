@@ -31,11 +31,35 @@ function showSlide(n) {
   slides[slideIndex - 1].classList.add("active");
   indicators[slideIndex - 1].classList.add("active");
 
-  // Set interval to automatically switch slides every 5 seconds
+
   intervalId = setInterval(() => {
     nextSlide();
   }, 5000);
 }
 
-// Start the initial slideshow
+
 showSlide(slideIndex);
+
+
+
+
+const navLinks = document.querySelectorAll('.navbar a');
+
+
+navLinks.forEach(link => {
+
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  }
+});
+
+window.addEventListener('popstate', function() {
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
+
